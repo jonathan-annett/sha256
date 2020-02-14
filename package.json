@@ -8,11 +8,12 @@
   "description": "newly created repo",
   "license": "MIT",
   "dependencies": {
+    "express": "^4.17.1",
+    "font-awesome": "^4.7.0"
   },
   "devDependencies": {},
   "scripts": {},
-  "keywords": [
-  ],
+  "keywords": [],
   "main": "index.js",
   "name": "font-awesome-express",
   "repository": {
