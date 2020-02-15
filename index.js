@@ -10,8 +10,9 @@ function font_awesome_express(app,url){
     url = url||"/font-awesome";
     app.use(url,express.static(fa_path));
     return {
-        url_base : urlm
-        url : path.join(url,"css","font-awesome.css");
-        url_min : path.join(url,"css","font-awesome.min.css");
+        url_base : url,
+        url : path.join(url,"css","font-awesome.css"),
+        url_min : path.join(url,"css","font-awesome.min.css")
+    };
 }
 module.exports = font_awesome_express;
