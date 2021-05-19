@@ -5,19 +5,18 @@
     "email": "jonathan.max.annett@gmail.com"
   },
   "contributors": [],
-  "description": "newly created repo",
+  "description": "sha256 hashing of strings for browser and node",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.17.1",
-    "font-awesome": "^4.7.0"
+    "express": "^4.17.1"
   },
   "devDependencies": {},
   "scripts": {},
   "keywords": [],
   "main": "index.js",
-  "name": "font-awesome-express",
+  "name": "sha256",
   "repository": {
-    "url": "https://github.com/jonathan-annett/font-awesome-express",
+    "url": "https://github.com/jonathan-annett/sha256",
     "type": "git"
   },
   "version": "0.0.1"
