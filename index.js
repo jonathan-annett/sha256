@@ -53,16 +53,18 @@ hex2a(hex) -- returns utf8 binary string of hex
     }
     
     function browserCode() {
+      if (browserCode.cache) return browserCode.cache;
       const src = require('fs').readFileSync(__filename,'utf8');
       const snip = src.split(['//browser','snip'].join('-'));
-      return snip[0]+snip[2];
+      browserCode.cache=snip[0]+snip[2];
+      return browserCode.cache;
     }
     
     function express(app,express,url) {
-      const src = browserCode();
+      browserCode();//call this at least once, sets up browserCode.cache 
       app.get(url||'/sha256.js',function(req,res){
         res.type('js');
-        res.status(200).send(src);
+        res.status(200).send(browserCode.cache);
       });
     }
     
