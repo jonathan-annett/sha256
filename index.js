@@ -60,12 +60,15 @@ hex2a(hex) -- returns utf8 binary string of hex
       return browserCode.cache;
     }
     
-    function express(app,express,url) {
-      browserCode();//call this at least once, sets up browserCode.cache 
+    function expr(app,express,url) {
+      
+      browserCode();
+      
       app.get(url||'/sha256.js',function(req,res){
         res.type('js');
         res.status(200).send(browserCode.cache);
       });
+      
     }
     
     module.exports = {
@@ -73,7 +76,7 @@ hex2a(hex) -- returns utf8 binary string of hex
       hex2a    : hex2a,
       randomStr : random,
       selfTest : selfTest,
-      express : express
+      express : expr
     };
     
   }
