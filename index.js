@@ -297,8 +297,8 @@ hex2a(hex) -- returns utf8 binary string of hex
         }
 
         var array = new Uint32Array(length);
-        crypto.getRandomValues(array.buffer);
-        const hexStr = hex(array);
+        crypto.getRandomValues(array);
+        const hexStr = hex(array.buffer);
         try {
            cb (undefined,enc==='hex'? hexStr : btoa(hex2a(hexStr)).split('=')[0]);
         } catch(e) {
